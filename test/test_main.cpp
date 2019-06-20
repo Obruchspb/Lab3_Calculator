@@ -32,6 +32,20 @@ TEST(all_tests, primer)
 	ASSERT_TRUE(result == calculator.lastResult);
 }
 
+TEST(all_tests, Long_primer2)
+{
+	double result = 910.97222222222217;
+	calculator.Calculate("10+(52-18/8*9)+4^7/18+(12-53)");
+	ASSERT_TRUE(result == calculator.lastResult);
+}
+
+TEST(all_tests, Long_primer3)
+{
+	double result = 199313.80833333332;
+	calculator.Calculate("2^2^3/15*(5+6^3^2)-15/8+6*9/8+222");
+	ASSERT_TRUE(result == calculator.lastResult);
+}
+
 TEST(all_tests, by_zero) 
 { 
 	double result = 0;
